@@ -1,0 +1,55 @@
+/opt/homebrew/bin/g++-15 name.cpp -o name \
+-I/opt/homebrew/opt/gd/include \
+-L/opt/homebrew/opt/gd/lib \
+-lgd -fopenmp
+
+
+
+./name input.png output.png
+
+montecarlo -> 
+mpic++ mpi_pi.cpp -o mpi_pi
+
+mpirun -np 4 ./mpi_pi
+
+
+/opt/homebrew/bin/g++-14 omp_pi.cpp -o prog4 -fopenmp
+./prog4
+
+
+
+mpicc mpi_message.c -o prog5
+mpirun -np 4 ./prog5
+
+
+g++-15 -fopenmp prime.cpp -o prog6
+./prog6
+
+
+/opt/homebrew/bin/g++-15 schedulling.cpp -o prog7 \
+-I/opt/homebrew/opt/gd/include \
+-L/opt/homebrew/opt/gd/lib \
+-lgd -fopenmp
+
+./prog7 prog7.png
+
+
+program1
+g++-15 -fopenmp -o a a.cpp
+./a
+
+mpic++ b.cpp -o b
+mpirun -np 4 ./b
+
+
+program2
+g++-15 -fopenmp -o b b.cpp
+./b
+
+program3
+g++-15 -fopenmp -o a a.cpp
+./a
+
+program5
+mpic++ a.cpp -o a
+mpirun -np 4 ./a
